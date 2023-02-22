@@ -1,4 +1,4 @@
 *.iso
 *.box
 *.vagrant
-*.gitignore
+.gitignore
