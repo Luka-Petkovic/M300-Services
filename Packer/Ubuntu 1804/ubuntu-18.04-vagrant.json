@@ -28,8 +28,8 @@
                 "<enter><wait>"
             ],
             "boot_wait": "10s",
-            "disk_size": 40960,
-            "guest_os_type": "Ubuntu_64",
+            "disk_size": 81920,
+            "guest_os_type": "Ubuntu-64",
             "headless": false,
             "http_directory": "http",
             "iso_urls": [
@@ -50,7 +50,7 @@
                 "modifyvm",
                 "{{.Name}}",
                 "--memory",
-                "4096"
+                "2048"
             ],
             [
                 "modifyvm",
