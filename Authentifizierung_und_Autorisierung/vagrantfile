@@ -1,0 +1,16 @@
+Vagrant.configure("2") do |config|
+    config.vm.box = "ubuntu/xenial64"
+    config.vm.network "forwarded_port", guest:443, host:8080, auto_correct: true
+    config.vm.hostname = "WebServer"
+    config.vm.provision "shell", inline: <<-SHELL
+      apt-get update
+      sudo apt-get install -y apache2
+      sudo a2ensite default-ssl.conf
+      sudo a2enmod ssl
+      sudo a2dissite 000-default.conf
+    SHELL
+    config.vm.provision "shell", path: "scripts/init.sh"
+    config.vm.provision "shell", inline: <<-SHELL
+        sudo service apache2 restart
+    SHELL
+  end
