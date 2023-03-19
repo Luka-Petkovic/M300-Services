@@ -2,12 +2,10 @@ Vagrant.configure("2") do |config|
   config.vm.define :firewall do |firewall|
       firewall.vm.box = "ubuntu/xenial64"
       firewall.vm.network :private_network, ip: "10.0.0.10"
-      firewall.vm.network "forwarded_port", guest:80, host:8080, auto_correct: true
       firewall.vm.hostname = "Firewall"
       firewall.vm.provision "shell", inline: <<-SHELL
       apt-get update
       sudo apt-get install ufw
-      sudo apt-get -y install apache2
       sudo ufw allow 80/tcp
       sudo ufw allow from 10.0.2.2 to any port 22
       sudo ufw allow from 10.0.0.20 to any port 3306
