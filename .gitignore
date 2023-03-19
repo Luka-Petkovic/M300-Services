@@ -1,0 +1,8 @@
+*.iso
+*.box
+*.vagrant
+packer_cache/
+*.pem
+keys.txt
+000-default.conf
+default-ssl.conf
