@@ -220,7 +220,7 @@ Visual Studio Code
   
 Diese erweiterungen kann man bei Visual Studio code an der Linken Seite finden... 
 
-![Erweiterungen bei Visual Studio Code](../Screenshot/Erweiterungen%20VSC.png)
+![Erweiterungen bei Visual Studio Code](../Screenshot/Erweiterungen.png)
 
 ### **Einstellungen anpassen**
 
