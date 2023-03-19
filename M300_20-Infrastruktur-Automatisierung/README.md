@@ -99,7 +99,7 @@ Folgen Sie diesen Schritten, um AWS für Vagrant vorzubereiten:
 ![AWS-Stammbenutzer](Screenshot/Stammbenutzer.png)
     
 2. Ändern Sie den Rechenzentrum-Standort auf Frankfurt, um die schnellste Verbindung zu erhalten. Beachten Sie jedoch, dass sich dieser je nach Bedarf ändern kann.
-![Franktfurt](Screenshot/Frankfurt.png)
+![Franktfurt](Screenshot/Frankfurt_Standort.png)
 
 3. Erstellen Sie einen AWS-Benutzer, auf den Vagrant auf "EC2" zugreifen kann.
 ![Benutzer-erstellen](Screenshot/Benutzer_erstellen.png)
