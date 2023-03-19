@@ -1,5 +1,4 @@
 # M300-Services | Lernumgebung
-======
 
 GitHub Account
 =======
