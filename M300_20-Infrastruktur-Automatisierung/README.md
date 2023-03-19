@@ -106,7 +106,7 @@ Folgen Sie diesen Schritten, um AWS für Vagrant vorzubereiten:
 ![Benutzer-erstellen](Screenshot/Benutzer_erstellen.png)
 
 4. Klicken Sie oben rechts auf Ihren Benutzernamen und dann auf "Sicherheitsanmeldeinformationen".
-![Benutzer](Screenshot/Benutzer.png)
+  ![Benutzer](Screenshot/Benutzer.png)
 
 5. Klicken Sie auf "Benutzer" und erstellen Sie einen neuen Benutzer mit dem Namen "vagrant".
 ![Benutzerrichtlinien](Screenshot/Benutzerrichtlinien.png)
