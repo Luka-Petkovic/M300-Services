@@ -95,27 +95,34 @@ $ vagrant box add dummy https://github.com/mitchellh/vagrant-aws/raw/master/dumm
 
 Folgen Sie diesen Schritten, um AWS für Vagrant vorzubereiten:
 
-1. Öffnen Sie die AWS-Website und erstellen Sie einen Amazon-Stammbenutzer, falls noch nicht vorhanden.
-
+1. Öffnen Sie die [AWS-Website](https://aws.amazon.com/de/) und erstellen Sie einen Amazon-Stammbenutzer, falls noch nicht vorhanden.
+![AWS-Stammbenutzer](Screenshot/Stammbenutzer.png)
     
 2. Ändern Sie den Rechenzentrum-Standort auf Frankfurt, um die schnellste Verbindung zu erhalten. Beachten Sie jedoch, dass sich dieser je nach Bedarf ändern kann.
-
+![Franktfurt](Screenshot/Frankfurt.png)
 
 3. Erstellen Sie einen AWS-Benutzer, auf den Vagrant auf "EC2" zugreifen kann.
+![Benutzer-erstellen](Screenshot/Benutzer_erstellen.png)
 
 4. Klicken Sie oben rechts auf Ihren Benutzernamen und dann auf "Sicherheitsanmeldeinformationen".
+![Benutzer](Screenshot/Benutzer.png)
 
 5. Klicken Sie auf "Benutzer" und erstellen Sie einen neuen Benutzer mit dem Namen "vagrant".
+![Benutzerrichtlinien](Screenshot/Benutzerrichtlinien.png)
 
 6. Weisen Sie diesem Benutzer die "Berechtigungsrichtlinie" "AmazonEC2FullAccess" zu.
+![EC2](Screenshot/EC2.png)
     
 7. Überprüfen Sie erneut, ob "Frankfurt" als Rechenzentrum ausgewählt ist.
+![Sicherheitsgruppen](Screenshot/Sicherheitsgruppen.png)
         
 8. Erstellen Sie eine Sicherheitsgruppe, die Datenverkehr über Port 22 und Port 80 an die VM zulässt.
+![Schlüsselpare](Screenshot/Schlüsselpare.png)
         
 9.  Erstellen Sie ein Schlüsselpaar und speichern Sie die .pem-Datei im Hauptverzeichnis des Vagrant-Projekts.
 Wählen Sie "RSA" und ".pem" und laden Sie die Datei mit dem privaten Schlüssel herunter.
 Achten Sie darauf, den Schlüssel nicht auf Github hochzuladen.
+![Zugriffsschlüssel](Screenshot/Zugriffsschlüssel.png)
 
 ### **Konfiguration des Vagrantfiles**
 
