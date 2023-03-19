@@ -37,3 +37,48 @@ config.vm.define :web do |web|
       SHELL
   end
 ```
+
+VM Vagrantfile - ReverseProxy
+===
+In diesem Vagrantfile werden ebenfalls zwei Virtuelle Maschinen hergestellt und definiert: eine für einen Reverse Proxy und eine für einen Webserver.
+
+Für den Reverse Proxy wird die "ubuntu/xenial64" Box verwendet und er erhält eine private IP-Adresse von 10.0.0.10 im privaten Netzwerk. Der Reverse Proxy wird so konfiguriert, dass er auf Port 8080 auf dem Hostsystem lauscht und eingehenden Datenverkehr an Port 80 auf der virtuellen Maschine weiterleitet. Der Ordner "Config_File/" auf dem Hostsystem wird mit dem Ordner "/etc/ap0ache2/sites-enabled/" auf der VM synchronisiert, um Konfigurationsdateien auszutauschen. Die virtuelle Maschine wird auch als "reverseproxy" mit dem Hostnamen "reverseproxy" konfiguriert.
+```
+Vagrant.configure("2") do |config|
+  config.vm.define :reverseproxy do |reverseproxy|
+      reverseproxy.vm.box = "ubuntu/xenial64"
+      reverseproxy.vm.network :private_network, ip: "10.0.0.10"
+      reverseproxy.vm.network "forwarded_port", guest:80, host:8080, auto_correct: true
+      reverseproxy.vm.synced_folder "Config_File/", "/etc/apache2/sites-enabled/"
+      reverseproxy.vm.hostname = "reverseproxy"
+
+      reverseproxy.vm.provision "shell", inline: <<-SHELL
+      apt-get update
+      sudo apt-get install -y apache2
+      sudo apt-get install libapache2-mod-proxy-html
+      sudo apt-get install libxml2-dev
+      sudo a2enmod proxy
+      sudo a2enmod proxy_html
+      sudo a2enmod proxy_http
+      SHELL
+      reverseproxy.vm.provision "shell", path: "scripts/init.sh"
+      reverseproxy.vm.provision "shell", inline: <<-SHELL
+      sudo service apache2 restart
+      SHELL
+  end
+```
+
+Für den Webserver wird ebenfalls die "ubuntu/xenial64" Box verwendet und er erhält eine private IP-Adresse von 10.0.0.20 im privaten Netzwerk. Der Webserver wird so konfiguriert, dass er auf Port 8090 auf dem Hostsystem lauscht und auf Port 80 auf der virtuellen Maschine antwortet. Der Ordner "html/" auf dem Hostsystem wird mit dem Ordner "/var/www/html" auf der VM synchronisiert, um Webinhalte auszutauschen. Die virtuelle Maschine wird auch als "web" mit dem Hostnamen "web" konfiguriert.
+```
+  config.vm.define :web do |web|
+      web.vm.box = "ubuntu/xenial64"
+      web.vm.network :private_network, ip: "10.0.0.20"
+      web.vm.hostname = "web"
+      web.vm.network "forwarded_port", guest:80, host:8090, auto_correct: true
+      web.vm.synced_folder "html/", "/var/www/html"
+      web.vm.provision "shell", inline: <<-SHELL
+      sudo apt-get update
+      sudo apt-get -y install apache2 
+      SHELL
+  end
+```
