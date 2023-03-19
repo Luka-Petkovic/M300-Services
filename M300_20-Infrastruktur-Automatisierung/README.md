@@ -99,27 +99,28 @@ Folgen Sie diesen Schritten, um AWS für Vagrant vorzubereiten:
 ![AWS-Stammbenutzer](Screenshot/Stammbenutzer.png)
     
 2. Ändern Sie den Rechenzentrum-Standort auf Frankfurt, um die schnellste Verbindung zu erhalten. Beachten Sie jedoch, dass sich dieser je nach Bedarf ändern kann.
+
 ![Franktfurt](Screenshot/Frankfurt.png)
 
-4. Erstellen Sie einen AWS-Benutzer, auf den Vagrant auf "EC2" zugreifen kann.
+3. Erstellen Sie einen AWS-Benutzer, auf den Vagrant auf "EC2" zugreifen kann.
 ![Benutzer-erstellen](Screenshot/Benutzer_erstellen.png)
 
-1. Klicken Sie oben rechts auf Ihren Benutzernamen und dann auf "Sicherheitsanmeldeinformationen".
+4. Klicken Sie oben rechts auf Ihren Benutzernamen und dann auf "Sicherheitsanmeldeinformationen".
 ![Benutzer](Screenshot/Benutzer.png)
 
-1. Klicken Sie auf "Benutzer" und erstellen Sie einen neuen Benutzer mit dem Namen "vagrant".
+5. Klicken Sie auf "Benutzer" und erstellen Sie einen neuen Benutzer mit dem Namen "vagrant".
 ![Benutzerrichtlinien](Screenshot/Benutzerrichtlinien.png)
 
-1. Weisen Sie diesem Benutzer die "Berechtigungsrichtlinie" "AmazonEC2FullAccess" zu.
+6. Weisen Sie diesem Benutzer die "Berechtigungsrichtlinie" "AmazonEC2FullAccess" zu.
 ![EC2](Screenshot/EC2.png)
     
-1. Überprüfen Sie erneut, ob "Frankfurt" als Rechenzentrum ausgewählt ist.
+7. Überprüfen Sie erneut, ob "Frankfurt" als Rechenzentrum ausgewählt ist.
 ![Sicherheitsgruppen](Screenshot/Sicherheitsgruppen.png)
         
-1. Erstellen Sie eine Sicherheitsgruppe, die Datenverkehr über Port 22 und Port 80 an die VM zulässt.
+8. Erstellen Sie eine Sicherheitsgruppe, die Datenverkehr über Port 22 und Port 80 an die VM zulässt.
 ![Schlüsselpare](Screenshot/Schlüsselpare.png)
         
-1.  Erstellen Sie ein Schlüsselpaar und speichern Sie die .pem-Datei im Hauptverzeichnis des Vagrant-Projekts.
+9.  Erstellen Sie ein Schlüsselpaar und speichern Sie die .pem-Datei im Hauptverzeichnis des Vagrant-Projekts.
 Wählen Sie "RSA" und ".pem" und laden Sie die Datei mit dem privaten Schlüssel herunter.
 Achten Sie darauf, den Schlüssel nicht auf Github hochzuladen.
 ![Zugriffsschlüssel](Screenshot/zugriffsschlüssel.png)
