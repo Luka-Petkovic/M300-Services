@@ -29,7 +29,7 @@ Folgende Befehle im Bash ausführen:
 
 1. Man muss den Key bei seinem Account unter den Einstellungen hinterlegen:
 
-![GitHub Konto SSH Keys](Screenshot/Screenshot%202023-03-13%20143259.png)
+![GitHub Konto SSH Keys](Screenshot/Github_SSH_Screenshot.png)
 
 Git Client
 ======
