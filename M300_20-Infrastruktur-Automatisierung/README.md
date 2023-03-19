@@ -40,13 +40,44 @@ vagrant ssh
 
 Packer
 ===
+Schwierigkeiten mit Packer auf windows Systemen
+
+Es kann vorkommen, dass Packer nur mit Linux und macOS-Systemen funktioniert, da es bei der Verwendung von Windows zu Schwierigkeiten bei der Einrichtung der Virtual Machine kommen kann. Dies liegt daran, dass Packer hauptsächlich für Unix-Systeme entwickelt wurde und einige der notwendigen Abhängigkeiten nicht standardmäßig in Windows enthalten sind. Wenn Sie also Packer verwenden möchten, sollten Sie eine Linux- oder macOS-Maschine verwenden, um eine reibungslose Einrichtung und Verwendung sicherzustellen.Deshalb haben wir AWS auf einem MAC Client konfiguriert.
+
+Hier eine kruze Anleitung wie man Packer auf Linux installiert
+
+Aktualisieren Sie Ihr Paket-Repository, um sicherzustellen, dass Sie die neuesten verfügbaren Versionen der Pakete installieren
+```
+sudo apt-get update
+```
+Installieren Sie das Paket "unzip", da es von Packer benötigt wird, um Archivdateien zu extrahieren
+```
+sudo apt-get install unzip
+```
+Laden Sie die neueste Version von Packer von der offiziellen Website herunter. Sie können den Download-Link auf der Seite https://www.packer.io/downloads finden
+```
+wget https://www.packer.io/downloads
+```
+Entpacken Sie das heruntergeladene Packer-Archiv in das Verzeichnis "/usr/local/bin/". Dieses Verzeichnis ist in der Regel bereits in Ihrem PATH enthalten, sodass Sie Packer einfach durch Eingabe des Befehlsnamens verwenden können
+```
+sudo unzip packer_*_linux_amd64.zip -d /usr/local/bin/
+```
+Stellen Sie sicher, dass Packer korrekt installiert wurde, indem Sie die Version des installierten Packer-Programms abrufen
+```
+packer version
+```
+Wenn alles korrekt installiert wurde, sollte die Ausgabe die installierte Version von Packer anzeigen. Herzlichen Glückwunsch, Sie haben Packer erfolgreich auf Ihrem Linux-System installiert!
+
+Nachdem Packer installiert ist muss man nur im Verzeichnis gehen und die .json Datei ausführen. Nun sollte automatisch eine Linux VM erstellt und konfiguriert werden.
+```
+Packer build ubuntu-18.04-vagrant.json
+```
 
 AWS
 ===
 Schwierigkeiten mit Windows Systemen
 
-Es kann vorkommen, dass Packer nur mit Linux und macOS-Systemen funktioniert, da es bei der Verwendung von Windows zu Schwierigkeiten bei der Einrichtung der Virtual Machine kommen kann. Dies liegt daran, dass Packer hauptsächlich für Unix-Systeme entwickelt wurde und einige der notwendigen Abhängigkeiten nicht standardmäßig in Windows enthalten sind. Wenn Sie also Packer verwenden möchten, sollten Sie eine Linux- oder macOS-Maschine verwenden, um eine reibungslose Einrichtung und Verwendung sicherzustellen.
-Deshalb haben wir AWS auf einem MAC Client konfiguriert.
+Da das Vagrant-Plugin "vagrant-aws" nicht mehr aktiv weiterentwickelt wird und möglicherweise nicht mehr mit den neuesten Versionen von Vagrant und AWS kompatibel ist, kann es auf Windows und Linux zu Problemen bei der Installation und Verwendung des Plugins kommen. Dies kann zu Fehlern bei der Konfiguration oder dem Starten von AWS-Instanzen führen. Aus diesem Grund haben wir uns entschieden, mit MacOS zu arbeiten, da Vagrant auf MacOS besser unterstützt wird und somit möglicherweise reibungsloser funktioniert.
 
 Verbindung mit AWS in Vagrant
 
