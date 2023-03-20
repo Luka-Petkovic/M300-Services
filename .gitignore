@@ -2,6 +2,7 @@
 *.box
 *.vagrant
 *.pem
+*.log
 keys.txt
 000-default.conf
 default-ssl.conf
