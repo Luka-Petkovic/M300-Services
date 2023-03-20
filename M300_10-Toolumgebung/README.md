@@ -250,7 +250,12 @@ http://localhost:8080
 ```
 Testfälle
 ======
-| Testfall                                           | geschätztes Ergebniss                       | effektives Ergebnis || -------------------------------------------------- | ------------------------------------------- | ------------------- || 1. Zugang via SSH                                  | Zugriff auf VM möglich                      | korrekt             || 2. Zugriff auf die Website                         | Zeigt apache-default-page                   | korrekt             || 3. Reproduzierbarkeit                              | VM kann genau gleich wieder erstellt werden | korrekt             || 4. VM kann von jemand anderes auch erstellt werden | bei Emir genau gleich erstellt              | korrekt             |
+| Testfall                                           | geschätztes Ergebniss                       | effektives Ergebnis |
+| -------------------------------------------------- | ------------------------------------------- | ------------------- |
+| 1. Zugang via SSH                                  | Zugriff auf VM möglich                      | korrekt             |
+| 2. Zugriff auf die Website                         | Zeigt apache-default-page                   | korrekt             |
+| 3. Reproduzierbarkeit                              | VM kann genau gleich wieder erstellt werden | korrekt             |
+| 4. VM kann von jemand anderes auch erstellt werden | bei Silvan genau gleich erstellt            | korrekt             |
 
 Wichtige Befehle
 ======
