@@ -12,6 +12,7 @@ Vagrant.configure("2") do |config|
         sudo apt-get install ufw -y
         sudo apt-get install libapache2-mod-proxy-html -y
         sudo apt-get install libxml2-dev -y
+        sudo apt-get install -y apache2
         sudo a2ensite 001-ssl.conf
         sudo a2enmod ssl
         sudo rm /etc/apache2/sites-enabled/000-default.conf
@@ -21,6 +22,7 @@ Vagrant.configure("2") do |config|
         sudo a2enmod proxy_html
         sudo a2enmod proxy_http
         sudo ufw allow from 10.0.2.2 to any port 22
+        sudo ufw allow 80/tcp
         sudo ufw allow 443/tcp
         sudo ufw --force enable
         SHELL
@@ -41,7 +43,7 @@ Vagrant.configure("2") do |config|
         sudo apt-get update
         sudo apt-get -y install apache2 ufw -y
         sudo ufw allow from 10.0.2.2 to any port 22
-        sudo ufw allow from 10.0.0.10 to any port 443
+        sudo ufw allow from 10.0.0.10 to any port 80
         sudo ufw --force enable
         SHELL
     end
