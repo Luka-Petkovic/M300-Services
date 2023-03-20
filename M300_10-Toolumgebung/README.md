@@ -248,6 +248,10 @@ apt-get update
 sudo apt-get install -y apache2
 ```
 Sobald die VM erstellt wurde kann man unter der URL http://localhost:8080 die apache Website öffnen
+```
+http://localhost:8080
+```
+
 Wichtige Befehle
 ======
 
