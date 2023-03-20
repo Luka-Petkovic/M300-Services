@@ -4,8 +4,8 @@ Vagrant.configure("2") do |config|
         reverseproxy.vm.network :private_network, ip: "10.0.0.10"
         reverseproxy.vm.network "forwarded_port", guest:443, host:443, auto_correct: true
         reverseproxy.vm.network "forwarded_port", guest:80, host:80, auto_correct: true
-        reverseproxy.vm.synced_folder "config/", "/etc/apache2/sites-enabled/"
         reverseproxy.vm.hostname = "reverseproxy"
+        reverseproxy.vm.synced_folder "config/", "/etc/apache2/sites-enabled/"
         reverseproxy.vm.provision "shell", inline: <<-SHELL
         apt-get update
         sudo apt-get install apache2 -y
@@ -14,14 +14,14 @@ Vagrant.configure("2") do |config|
         sudo apt-get install libxml2-dev -y
         sudo a2ensite 001-ssl.conf
         sudo a2enmod ssl
-        sudo a2dissite 000-default.conf
-        sudo a2dissite default-ssl.conf
+        sudo rm /etc/apache2/sites-enabled/000-default.conf
+        sudo rm /etc/apache2/sites-enabled/default-ssl.conf
         sudo htpasswd -b -c /etc/apache2/.htpasswd vagrant Passwort
         sudo a2enmod proxy
         sudo a2enmod proxy_html
         sudo a2enmod proxy_http
         sudo ufw allow from 10.0.2.2 to any port 22
-        sudo ufw allow 80/tcp
+        sudo ufw allow 443/tcp
         sudo ufw --force enable
         SHELL
         reverseproxy.vm.provision "shell", path: "scripts/init.sh"
@@ -41,7 +41,7 @@ Vagrant.configure("2") do |config|
         sudo apt-get update
         sudo apt-get -y install apache2 ufw -y
         sudo ufw allow from 10.0.2.2 to any port 22
-        sudo ufw allow from 10.0.0.10 to any port 80
+        sudo ufw allow from 10.0.0.10 to any port 443
         sudo ufw --force enable
         SHELL
     end

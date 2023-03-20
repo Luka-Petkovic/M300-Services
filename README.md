@@ -261,7 +261,7 @@ Testfälle
 
 Reflexion
 ======
-Am Anfang hatten wir eine schwierige Zeit, um in das Thema reinzukommen. Das war aber nicht lange so. Nachdem wir uns ein wenig schlau gemacht haben und ein paar Test durchgeführt haben, wurde uns immer mehr und mehr klar. Wir Ware steht bei der Sache und hatten alles Aufgeben versucht zu meistern. Wir waren so verbissen das wir mehrere Stunden an einem Problem sassen, bis es schlussendlich funktionierte. Ich finde wir haben sehr gut und schnell gearbeitet und ich bin zufrieden mit unserer Leistung.
+Am Anfang hatten wir eine schwierige Zeit, um in das Thema reinzukommen. Das war aber nicht lange so. Nachdem wir uns ein wenig schlau gemacht haben und ein paar Test durchgeführt haben, wurde uns immer mehr und mehr klar. Wir waren stehts bei der Sache und hatten alle Aufgaben versucht zu meistern. Wir waren so verbissen das wir mehrere Stunden an einem Problem sassen, bis es schlussendlich funktionierte. Ich finde wir haben sehr gut und schnell gearbeitet und ich bin zufrieden mit unserer Leistung.
 
 Wichtige Befehle
 ======
