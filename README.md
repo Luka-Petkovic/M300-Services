@@ -237,6 +237,8 @@ Diese erweiterungen kann man bei Visual Studio code an der Linken Seite finden..
 
 Automatischer Web-Server | MyVagrant Folder
 ======
+Navigieren sie im Folder "M300_10-Toolumgebung/MyVagrant" dort sollten sie ein Vagrantfile finden.
+ 
 Mit diesem Vagranfile kann automatisch ein Web-Server erstellen ohne etwas gross zu machen. Mann muss nur diesen einen Befehl ausführen:
 ```
 vagrant up
