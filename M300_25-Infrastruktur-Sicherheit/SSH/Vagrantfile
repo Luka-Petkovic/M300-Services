@@ -1,21 +1,32 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
 Vagrant.configure("2") do |config|
-  config.vm.box = "ubuntu/bionic64"
+
+  config.vm.box = "ubuntu/focal64"
 
   config.vm.define "vm1" do |vm1|
-    vm1.vm.network "private_network", ip: "192.168.50.10"
-    vm1.vm.network "forwarded_port", guest: 80, host: 8888
-    vm1.vm.provider "virtualbox" do |vb|
-      vb.memory = "512"
-    end
+    vm1.vm.hostname = "vm1"
+    vm1.vm.network "private_network", ip: "192.168.33.10"
+    vm1.vm.provision "shell", inline: <<-SHELL
+      sudo apt-get update
+      sudo apt-get install -y sshpass
+      [ ! -f /home/vagrant/.ssh/id_rsa ] && ssh-keygen -t rsa -b 4096 -f /home/vagrant/.ssh/id_rsa -N "" -C "vagrant@vm1"
+      sleep 30
+      sshpass -p 'vagrant' ssh-copy-id -i /home/vagrant/.ssh/id_rsa.pub -o StrictHostKeyChecking=no vagrant@192.168.33.11
+    SHELL
   end
 
   config.vm.define "vm2" do |vm2|
-    vm2.vm.network "private_network", ip: "192.168.50.11"
-    vm2.vm.network "forwarded_port", guest: 8888, host: 8080
-    vm2.vm.provider "virtualbox" do |vb|
-      vb.memory = "512"
-    end
+    vm2.vm.hostname = "vm2"
+    vm2.vm.network "private_network", ip: "192.168.33.11"
+    vm2.vm.provision "shell", inline: <<-SHELL
+      sudo apt-get update
+      sudo apt-get install -y sshpass
+      [ ! -f /home/vagrant/.ssh/id_rsa ] && ssh-keygen -t rsa -b 4096 -f /home/vagrant/.ssh/id_rsa -N "" -C "vagrant@vm2"
+      sleep 30
+      sshpass -p 'vagrant' ssh-copy-id -i /home/vagrant/.ssh/id_rsa.pub -o StrictHostKeyChecking=no vagrant@192.168.33.10
+    SHELL
   end
 
-  config.ssh.forward_agent = true
 end
