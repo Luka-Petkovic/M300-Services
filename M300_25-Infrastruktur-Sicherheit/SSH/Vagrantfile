@@ -12,8 +12,11 @@ Vagrant.configure("2") do |config|
       sudo apt-get update
       sudo apt-get install -y sshpass
       [ ! -f /home/vagrant/.ssh/id_rsa ] && ssh-keygen -t rsa -b 4096 -f /home/vagrant/.ssh/id_rsa -N "" -C "vagrant@vm1"
+      chmod 600 /home/vagrant/.ssh/id_rsa
       sleep 30
       sshpass -p 'vagrant' ssh-copy-id -i /home/vagrant/.ssh/id_rsa.pub -o StrictHostKeyChecking=no vagrant@192.168.33.11
+      sudo apt-get install -y autossh
+      autossh -M 0 -f -N -L 2222:localhost:22 -i /home/vagrant/.ssh/id_rsa vagrant@192.168.33.11
     SHELL
   end
 
@@ -24,6 +27,7 @@ Vagrant.configure("2") do |config|
       sudo apt-get update
       sudo apt-get install -y sshpass
       [ ! -f /home/vagrant/.ssh/id_rsa ] && ssh-keygen -t rsa -b 4096 -f /home/vagrant/.ssh/id_rsa -N "" -C "vagrant@vm2"
+      chmod 600 /home/vagrant/.ssh/id_rsa
       sleep 30
       sshpass -p 'vagrant' ssh-copy-id -i /home/vagrant/.ssh/id_rsa.pub -o StrictHostKeyChecking=no vagrant@192.168.33.10
     SHELL
