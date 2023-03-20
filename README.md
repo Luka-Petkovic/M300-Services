@@ -259,6 +259,10 @@ Testfälle
 | 3. Reproduzierbarkeit                              | VM kann genau gleich wieder erstellt werden | korrekt             |
 | 4. VM kann von jemand anderes auch erstellt werden | bei Silvan genau gleich erstellt            | korrekt             |
 
+Reflexion
+======
+Am Anfang hatten wir eine schwierige Zeit, um in das Thema reinzukommen. Das war aber nicht lange so. Nachdem wir uns ein wenig schlau gemacht haben und ein paar Test durchgeführt haben, wurde uns immer mehr und mehr klar. Wir Ware steht bei der Sache und hatten alles Aufgeben versucht zu meistern. Wir waren so verbissen das wir mehrere Stunden an einem Problem sassen, bis es schlussendlich funktionierte. Ich finde wir haben sehr gut und schnell gearbeitet und ich bin zufrieden mit unserer Leistung.
+
 Wichtige Befehle
 ======
 
