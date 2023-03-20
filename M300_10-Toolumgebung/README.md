@@ -196,9 +196,6 @@ vagrant ssh
 
 4. VM über GUI ausschalten.
 
-### **Apache Webserver automatisiert aufsetzen**
-
-
 Visual Studio Code
 ======
 
