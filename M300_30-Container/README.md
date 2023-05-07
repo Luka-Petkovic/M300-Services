@@ -49,3 +49,14 @@ Dieses Dockerfile erstellt ein Image für einen Apache Webserver auf Basis des o
 
 
 Das erstellte Image des Apache-Webservers kann sowohl in einem privaten Unternehmen als auch auf Docker-Hub hochgeladen werden, um es später auf anderen Systemen oder in der Cloud zu verwenden. Durch das Hochladen in ein privates Unternehmen können Sie das Image innerhalb Ihres Netzwerks oder auf Ihren eigenen Servern speichern und verteilen, während das Hochladen auf Docker-Hub das Image der breiten Öffentlichkeit zugänglich macht.
+
+Volumes
+===
+
+Volumes in Docker ermöglichen es, Daten zwischen Containern auszutauschen und persistent zu speichern. Sie bieten Datenspeicherung, Persistenz und Flexibilität, um Daten in einem Container-Cluster zu teilen und zu skalieren.
+
+### **MySQL**
+Dieses Dockerfile erstellt ein MySQL-Image mit spezifischen Konfigurationen. Es setzt Umgebungsvariablen, erstellt ein Volume für MySQL-Daten und öffnet den Port 3306.
+
+### **Test**
+Dieses Dockerfile erstellt ein Image auf Basis des offiziellen Busybox-Images. Es erstellt ein Volume mit dem Namen test-volume und startet die Busybox-Shell als Standardkommando.
