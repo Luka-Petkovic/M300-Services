@@ -56,10 +56,7 @@ Volumes
 Volumes in Docker ermöglichen es, Daten zwischen Containern auszutauschen und persistent zu speichern. Sie bieten Datenspeicherung, Persistenz und Flexibilität, um Daten in einem Container-Cluster zu teilen und zu skalieren.
 
 ### **MySQL**
-Dieses Dockerfile erstellt ein MySQL-Image mit spezifischen Konfigurationen. Es setzt Umgebungsvariablen, erstellt ein Volume für MySQL-Daten und öffnet den Port 3306.
-
-### **Test**
-Dieses Dockerfile erstellt ein Image auf Basis des offiziellen Busybox-Images. Es erstellt ein Volume mit dem Namen test-volume und startet die Busybox-Shell als Standardkommando.
+Dieses Dockerfile erstellt ein MySQL-Image mit spezifischen Konfigurationen. Es setzt Umgebungsvariablen, erstellt ein Volume für MySQL-Daten und öffnet den Port 3306. Mit einem Bestimmten Befehl kann man testen, ob das Volume auch richtig aufgesetzt ist (Siehe im "Volumes" Ordner).
 
 Testfälle
 ======
