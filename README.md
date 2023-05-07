@@ -279,6 +279,9 @@ Wichtige Befehle
 | `git status`  | Zeigt den Status der Arbeitskopie und des Repositories an        |
 | `git log`     | Zeigt die Versionsgeschichte mit allen Commits an                |
 
+M300 - 30 Container
+===
+
 Container
 ===
 
@@ -558,6 +561,9 @@ Das TAR-Format dient der Archivierung und Komprimierung von Dateien und Verzeich
 
 Es gibt verschiedene Möglichkeiten, Images neben dem Docker Hub bereitzustellen, aber die manuelle Erstellung oder der Export/Import von Images sind suboptimale Optionen. Das Erstellen von Images aus Dockerfiles auf jedem Host ist langsam und kann zu unterschiedlichen Images führen, während das Exportieren und Importieren von Images knifflig und fehleranfällig sein kann. Stattdessen wird empfohlen, eine andere Registry zu verwenden, die selbst gehostet oder von einem anderen Unternehmen betrieben wird.
 
+M300 - 35 Container-Sicherheit
+=== 
+
 Protokollieren & Überwachen
 ===
 
@@ -663,6 +669,9 @@ Natürlich können die konkreten Schritte zur Absicherung von Containern je nach
 Weitere Massnahmen:
 
     Beim Einsatz sicherheitskritischer Container:
+
+M300 - 40 Kubernetes (K8s)
+===
 
 Grundbegriffe
 ===
