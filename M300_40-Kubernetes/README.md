@@ -9,11 +9,11 @@ Diese YAML-Datei definiert eine Kubernetes-Deploymentkonfiguration mit einem "ma
 
 Testfälle
 ======
-| Testfall                                                  | geschätztes Ergebniss                       | effektives Ergebnis |
-| --------------------------------------------------------- | ------------------------------------------- | ------------------- |
-| 1. Kubernetes erstellen                                   | Kubernetes wird erfolgreich erstellt        | korrekt             |
-| 3. Kubernetes ist abrufbar                                | Kubernetes konnte abgerufen werden          | korrekt             |
-| 4. Reproduzierbarkeit                                     | Kubernetes wird genau gleich erstellt       | korrekt             |
-| 5. Container kann von jemand anderes auch erstellt werden | bei Tim genau gleich erstellt               | korrekt             |
+| Testfall                                                   | geschätztes Ergebniss                       | effektives Ergebnis |
+| ---------------------------------------------------------- | ------------------------------------------- | ------------------- |
+| 1. Kubernetes erstellen                                    | Kubernetes wird erfolgreich erstellt        | korrekt             |
+| 3. Kubernetes ist abrufbar                                 | Kubernetes konnte abgerufen werden          | korrekt             |
+| 4. Reproduzierbarkeit                                      | Kubernetes wird genau gleich erstellt       | korrekt             |
+| 5. Kubernetes kann von jemand anderes auch erstellt werden | bei Tim genau gleich erstellt               | korrekt             |
 
 [&uarr; nach oben](https://github.com/Luka-Petkovic/M300-Services/tree/main/M300_40-Kubernetes)
