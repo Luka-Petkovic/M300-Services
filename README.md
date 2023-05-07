@@ -771,3 +771,29 @@ Lastenverteilung
 Lastverteilung bezeichnet den Prozess der Verteilung von Arbeitslasten (z.B. Anfragen, Berechnungen oder Daten) auf mehrere parallel arbeitende Systeme oder Ressourcen.
 
 [&uarr; nach oben](https://github.com/Luka-Petkovic/M300-Services)
+
+Lastenverteilung
+===
+
+Lastverteilung bezeichnet den Prozess der Verteilung von Arbeitslasten (z.B. Anfragen, Berechnungen oder Daten) auf mehrere parallel arbeitende Systeme oder Ressourcen.
+
+[&uarr; nach oben](https://github.com/Luka-Petkovic/M300-Services)
+
+Cluster
+===
+
+Ein Cluster ist eine Gruppe von verbundenen oder zusammengeschlossenen Computersystemen, die gemeinsam als ein System oder eine Einheit arbeiten. Die einzelnen Systeme in einem Cluster werden auch als Knoten bezeichnet. Ein Cluster wird verwendet, um die Leistung und Verfügbarkeit von Anwendungen und Diensten zu erhöhen, indem Ressourcen wie Prozessoren, Speicher und Netzwerkbandbreite zwischen den Knoten aufgeteilt werden.
+
+[&uarr; nach oben](https://github.com/Luka-Petkovic/M300-Services)
+
+Kubernetes
+===
+Kubernetes ist eine Open-Source-Plattform zur Automatisierung, Bereitstellung und Verwaltung von Containeranwendungen. Es dient als Orchestrierungswerkzeug, das die Skalierung, Überwachung und Lastverteilung von Containern auf mehreren Hosts oder Cloud-Plattformen erleichtert.
+
+[&uarr; nach oben](https://github.com/Luka-Petkovic/M300-Services)
+
+Kubernetes Cluster
+===
+Ein Kubernetes-Cluster besteht aus einem Master-Node, der die Kontrolle und Verwaltung des Clusters übernimmt, und mehreren Worker-Nodes, die die eigentlichen Anwendungen ausführen. Durch die Verwendung von Kubernetes-Clustern können Unternehmen ihre Anwendungen effizienter bereitstellen, skalieren und verwalten und gleichzeitig die Verfügbarkeit und Skalierbarkeit ihrer Anwendungen verbessern.
+
+[&uarr; nach oben](https://github.com/Luka-Petkovic/M300-Services)
