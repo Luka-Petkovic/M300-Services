@@ -57,6 +57,7 @@ kind: Service
 metadata:
   name: master-service
 spec:
+  clusterIP: 10.96.10.100
   selector:
     app: master
   ports:
@@ -70,6 +71,7 @@ kind: Service
 metadata:
   name: worker-service
 spec:
+  clusterIP: 10.96.10.101
   selector:
     app: worker
   ports:
