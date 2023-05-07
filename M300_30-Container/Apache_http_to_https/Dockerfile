@@ -19,8 +19,8 @@ RUN a2enmod ssl && \
 
 # Erstelle die Umleitungsregel für Port 80 auf 443 in einer .conf-Datei
 RUN echo '<VirtualHost *:80>' > /etc/apache2/sites-available/000-default.conf && \
-    echo '   ServerName www.example.com' >> /etc/apache2/sites-available/000-default.conf && \
-    echo '   Redirect permanent / https://www.example.com/' >> /etc/apache2/sites-available/000-default.conf && \
+    echo '   ServerName localhost' >> /etc/apache2/sites-available/000-default.conf && \
+    echo '   Redirect permanent / https://localhost/' >> /etc/apache2/sites-available/000-default.conf && \
     echo '</VirtualHost>' >> /etc/apache2/sites-available/000-default.conf
 
 # Füge die Authentifizierungsanweisungen zur SSL-Konfigurationsdatei hinzu
