@@ -32,6 +32,8 @@ Folgende Befehle im Bash ausführen:
 
 ![GitHub Konto SSH Keys](Screenshot/Github_SSH_Screenshot.png)
 
+[&uarr; nach oben](https://github.com/Luka-Petkovic/M300-Services)
+
 Git Client
 ======
 ### **Client installieren**
@@ -110,7 +112,7 @@ git commit -m "Mein Kommentar"
 ```
 git push
 ```
-
+[&uarr; nach oben](https://github.com/Luka-Petkovic/M300-Services)
 
 Virtualbox
 ======
@@ -161,6 +163,8 @@ sudo reboot
 
 Damit wir testen können, ob das ganze funktoniert hat, muss man prüfen, ob der Standard-Content des Webservers localhost erreichbar ist.
 
+[&uarr; nach oben](https://github.com/Luka-Petkovic/M300-Services)
+
 Vagrant
 ======
 
@@ -199,6 +203,8 @@ vagrant ssh
 
 4. VM über GUI ausschalten.
 
+[&uarr; nach oben](https://github.com/Luka-Petkovic/M300-Services)
+
 Visual Studio Code
 ======
 
@@ -235,6 +241,8 @@ Diese erweiterungen kann man bei Visual Studio code an der Linken Seite finden..
 
 ![Upload der Veränderungen](/Screenshot/Push_Changes.png)
 
+[&uarr; nach oben](https://github.com/Luka-Petkovic/M300-Services)
+
 Automatischer Web-Server | MyVagrant Folder
 ======
 Navigieren sie im Folder "M300_10-Toolumgebung/MyVagrant" dort sollten sie ein Vagrantfile finden.
@@ -253,6 +261,9 @@ Sobald die VM erstellt wurde kann man unter der URL http://localhost:8080 die ap
 ```
 http://localhost:8080
 ```
+
+[&uarr; nach oben](https://github.com/Luka-Petkovic/M300-Services)
+
 Testfälle
 ======
 | Testfall                                           | geschätztes Ergebniss                       | effektives Ergebnis |
@@ -265,6 +276,8 @@ Testfälle
 Reflexion
 ======
 Am Anfang hatten wir eine schwierige Zeit, um in das Thema reinzukommen. Das war aber nicht lange so. Nachdem wir uns ein wenig schlau gemacht haben und ein paar Test durchgeführt haben, wurde uns immer mehr und mehr klar. Wir waren stehts bei der Sache und hatten alle Aufgaben versucht zu meistern. Wir waren so verbissen das wir mehrere Stunden an einem Problem sassen, bis es schlussendlich funktionierte. Ich finde wir haben sehr gut und schnell gearbeitet und ich bin zufrieden mit unserer Leistung.
+
+[&uarr; nach oben](https://github.com/Luka-Petkovic/M300-Services)
 
 Wichtige Befehle
 ======
@@ -282,6 +295,8 @@ Wichtige Befehle
 | `git status`  | Zeigt den Status der Arbeitskopie und des Repositories an        |
 | `git log`     | Zeigt die Versionsgeschichte mit allen Commits an                |
 
+[&uarr; nach oben](https://github.com/Luka-Petkovic/M300-Services)
+
 M300 - 30 Container
 ===
 
@@ -291,6 +306,8 @@ Container
 Ein Container ist ein Konzept der Informatik, das hilfreich ist, um Anwendungen in einer Umgebung auszuführen, die isoliert und unabhängig von anderen Anwendungen und dem Betriebssystem des Computers ist.
 
 Ein Vorteil von Containern ist, dass sie portabel sind und auf verschiedenen Betriebssystemen und Servern ausgeführt werden können, solange sie die Container-Software unterstützen. Durch die Verwendung von Containern können Anwendungen schneller bereitgestellt und skaliert werden, da sie unabhängig von der zugrunde liegenden Infrastruktur sind und somit schneller und einfacher bereitgestellt werden können.
+
+[&uarr; nach oben](https://github.com/Luka-Petkovic/M300-Services)
 
 Docker
 ===
@@ -355,6 +372,8 @@ Wenn alles funktioniert hat, sollte es folgendermassen aussehen:
 
 Somit hat man Docker Desktop erfolgreich auf Windows installiert und WSL2 aktiviert.
 
+[&uarr; nach oben](https://github.com/Luka-Petkovic/M300-Services)
+
 Docker Architecktur
 ===
 
@@ -389,6 +408,8 @@ Docker Architecktur
 
 * In Docker Registries werden Images abgelegt und verteilt.
 
+[&uarr; nach oben](https://github.com/Luka-Petkovic/M300-Services)
+
 Dockerfile
 ===
 
@@ -412,12 +433,16 @@ Funktionsfähigkeit überprüfen:
     $ netstat -tulpen
 ```
 
+[&uarr; nach oben](https://github.com/Luka-Petkovic/M300-Services)
+
 Netzwerk-Anbindung
 ===
 
 Das wichtigste bei den Netzwerk Anbindungen ist, dass man weiss wie man Aussenstehenden Personen zugriff gebenkann. Das ganze funktioniert mit Ports. Dafür braucht man folgenden Behfel: -p oder -P.
 
 Um eine Verbindung zu einem Docker-Container herzustellen, der eine Anwendung ausführt, die auf einen bestimmten Port hört, muss der Port an den Host oder das Netzwerk weitergeleitet werden. Dazu kann man im Dockerfile die Ports, die die Anwendung nutzt, über die Anweisung "EXPOSE" eintragen. Dies ermöglicht es, dass andere Container oder Anwendungen über das Netzwerk auf den Container zugreifen und mit der Anwendung kommunizieren können.
+
+[&uarr; nach oben](https://github.com/Luka-Petkovic/M300-Services)
 
 Volumes
 ===
@@ -472,6 +497,7 @@ Um auf ein Container zugreifen zukönnen, muss man folgenden Behfel eingeben:
 
 Docker Volume ist seit Version 1.9 ein wichtiger Befehl, zur Verwaltung von Volumes auf einem Docker Host. Mit dem Befehl kann man ganz viele Sachen verwalten. Alle diese hier aufzuzählen macht aber keinen Sinn.
 
+[&uarr; nach oben](https://github.com/Luka-Petkovic/M300-Services)
 
 Image-Bereitstellung
 ===
@@ -564,6 +590,8 @@ Das TAR-Format dient der Archivierung und Komprimierung von Dateien und Verzeich
 
 Es gibt verschiedene Möglichkeiten, Images neben dem Docker Hub bereitzustellen, aber die manuelle Erstellung oder der Export/Import von Images sind suboptimale Optionen. Das Erstellen von Images aus Dockerfiles auf jedem Host ist langsam und kann zu unterschiedlichen Images führen, während das Exportieren und Importieren von Images knifflig und fehleranfällig sein kann. Stattdessen wird empfohlen, eine andere Registry zu verwenden, die selbst gehostet oder von einem anderen Unternehmen betrieben wird.
 
+[&uarr; nach oben](https://github.com/Luka-Petkovic/M300-Services)
+
 M300 - 35 Container-Sicherheit
 === 
 
@@ -622,7 +650,7 @@ Wenn man als System Administrator bei einem Microservices-System arbeitet, ist m
 
     $ docker run -d --name cadvisor -v /:/rootfs:ro -v /var/run:/var/run:rw -v /sys:/sys:ro -v /var/lib/docker/:/var/lib/docker:ro -p 8080:8080
 
-
+[&uarr; nach oben](https://github.com/Luka-Petkovic/M300-Services)
  
 Container sichern & beschränken
 ===
@@ -672,6 +700,8 @@ Natürlich können die konkreten Schritte zur Absicherung von Containern je nach
 Weitere Massnahmen:
 
     Beim Einsatz sicherheitskritischer Container:
+
+[&uarr; nach oben](https://github.com/Luka-Petkovic/M300-Services)
 
 M300 - 40 Kubernetes (K8s)
 ===
