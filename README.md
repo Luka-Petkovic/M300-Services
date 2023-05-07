@@ -327,13 +327,13 @@ Nach Abschluss der Installation startet Docker Desktop automatisch. Möglicherwe
 
 Öffne Docker Desktop und gehene auf das Zahnrad. Unter "General" kann man nun WSL2 Aktivieren:
 
-![WSL2 aktivieren](../Screenshot/WS".png)
+![WSL2 aktivieren](/Screenshot/WS".png)
 
 1. Installieren Sie eine Linux-Distribution.
 
 Da Docker Desktop WSL2 als Engine verwendet, benötigen Sie eine Linux-Distribution, die auf Ihrem Computer ausgeführt werden kann. Ich empfehle Ubuntu 22.04.2 LTS:
 
-![Ubuntu 22.04.2 LTS](../Screenshot/Ubuntu_W.png)
+![Ubuntu 22.04.2 LTS](/Screenshot/Ubuntu_W.png)
 
 
 6. Überprüfen Sie die Installation.
@@ -343,7 +343,7 @@ Da Docker Desktop WSL2 als Engine verwendet, benötigen Sie eine Linux-Distribut
 docker run hello-world
 ```
 Wenn alles funktioniert hat, sollte es folgendermassen aussehen:
-![Test Docker](../Screenshot/Docker_hello_world.png)
+![Test Docker](/Screenshot/Docker_hello_world.png)
 
 
 
@@ -352,7 +352,7 @@ Somit hat man Docker Desktop erfolgreich auf Windows installiert und WSL2 aktivi
 Docker Architecktur
 ===
 
-![Architecktur Docker](../Screenshot/Grafik.png)
+![Architecktur Docker](/Screenshot/Grafik.png)
 
 ## Docker Deamon ## 
 
