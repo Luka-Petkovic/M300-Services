@@ -692,10 +692,6 @@ Natürlich können die konkreten Schritte zur Absicherung von Containern je nach
 
 8. Einschränken des Zugriffs auf Host-Ressourcen wie Dateien oder Verzeichnisse durch die Verwendung von Volumes oder Bind Mounts mit gezielten Berechtigungen.
 
-Weitere Massnahmen:
-
-    Beim Einsatz sicherheitskritischer Container:
-
 [&uarr; nach oben](https://github.com/Luka-Petkovic/M300-Services)
 
 Weitere Sicherheitstipps
