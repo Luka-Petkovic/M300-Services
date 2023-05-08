@@ -4,6 +4,7 @@ Apache Server
 Beim ausführen dieses Dockerfile wird ein Container erstellt, der einen Apache-Webserver und eine HTML-Seite bereitstellt. Der Benutzer kann auf diese Anwendung über einen Webbrowser zugreifen und die HTML-Seite mit der Nachricht "Das ist ein Test" anzeigen lassen.
 
 '''
+
 RUN apt-get update && \
     apt-get install -y apache2 curl && \
     rm -rf /var/lib/apt/lists/*
@@ -11,6 +12,7 @@ RUN apt-get update && \
 COPY ./apache.conf /etc/apache2/sites-available/000-default.conf
 
 COPY ./index.html /var/www/html/
+
 '''
 
 ### **Dockerfile**
