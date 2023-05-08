@@ -273,12 +273,6 @@ Testfälle
 | 3. Reproduzierbarkeit                              | VM kann genau gleich wieder erstellt werden | korrekt             |
 | 4. VM kann von jemand anderes auch erstellt werden | bei Silvan genau gleich erstellt            | korrekt             |
 
-Reflexion
-======
-Am Anfang hatten wir eine schwierige Zeit, um in das Thema reinzukommen. Das war aber nicht lange so. Nachdem wir uns ein wenig schlau gemacht haben und ein paar Test durchgeführt haben, wurde uns immer mehr und mehr klar. Wir waren stehts bei der Sache und hatten alle Aufgaben versucht zu meistern. Wir waren so verbissen das wir mehrere Stunden an einem Problem sassen, bis es schlussendlich funktionierte. Ich finde wir haben sehr gut und schnell gearbeitet und ich bin zufrieden mit unserer Leistung.
-
-[&uarr; nach oben](https://github.com/Luka-Petkovic/M300-Services)
-
 Wichtige Befehle
 ======
 
@@ -787,5 +781,18 @@ Kubernetes ist eine Open-Source-Plattform zur Automatisierung, Bereitstellung un
 Kubernetes Cluster
 ===
 Ein Kubernetes-Cluster besteht aus einem Master-Node, der die Kontrolle und Verwaltung des Clusters übernimmt, und mehreren Worker-Nodes, die die eigentlichen Anwendungen ausführen. Durch die Verwendung von Kubernetes-Clustern können Unternehmen ihre Anwendungen effizienter bereitstellen, skalieren und verwalten und gleichzeitig die Verfügbarkeit und Skalierbarkeit ihrer Anwendungen verbessern.
+
+Reflexion
+======
+
+Während des Moduls haben wir uns einer Vielzahl von Herausforderungen gestellt, die oft sehr komplex und anspruchsvoll waren. Doch unser Tisch hat immer hart daran gearbeitet, um diese Hindernisse zu überwinden. Wir waren auch sehr kreativ und haben uns zusätzliche Aufgaben gestellt, um unsere Fähigkeiten weiterzuentwickeln und unser Potenzial voll auszuschöpfen.
+
+Trotz der Schwierigkeiten haben wir uns nie entmutigen lassen und standen immer wieder auf, um weiterzumachen. Dabei haben wir als Team sehr gut zusammengearbeitet und uns gegenseitig unterstützt
+
+**Eigene Reflexion** <br>
+
+Während des Moduls habe ich eine Menge gelernt und mein Wissen erheblich erweitert. Die komplexen Aufgaben, die wir im Team gemeistert haben, haben mich dazu gebracht, mein Wissen auf neue und kreative Weise anzuwenden und meine Fähigkeiten zu verbessern. Das gibt mir die Zuversicht und Entschlossenheit, in Zukunft auch schwierigere Aufgaben zu bewältigen
+
+Insgesamt bin ich sehr stolz auf meine und deren anderen Leistung und die Art und Weise, wie wir als Team zusammengearbeitet haben.
 
 [&uarr; nach oben](https://github.com/Luka-Petkovic/M300-Services)
