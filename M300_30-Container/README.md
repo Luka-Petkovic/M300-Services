@@ -3,6 +3,8 @@ Apache Server
 
 Beim ausführen dieses Dockerfile wird ein Container erstellt, der einen Apache-Webserver und eine HTML-Seite bereitstellt. Der Benutzer kann auf diese Anwendung über einen Webbrowser zugreifen und die HTML-Seite mit der Nachricht "Das ist ein Test" anzeigen lassen.
 
+### **Dockerfile**
+In diesem Dockerfile wird das neueste Ubuntu-Basisimage als Grundlage verwendet, anschließend werden der Apache-Webserver und das curl-Programm installiert, die Konfigurationsdatei des Apache-Servers aktualisiert, die index.html-Datei in das Verzeichnis /var/www/html kopiert und der Container auf Port 8081 freigegeben. Abschließend wird der Befehl zum Starten des Apache-Servers definiert.
 ```
 RUN apt-get update && \
     apt-get install -y apache2 curl && \
@@ -16,9 +18,6 @@ COPY ./apache.conf /etc/apache2/sites-available/000-default.conf
 ```
 COPY ./index.html /var/www/html/
 ```
-
-### **Dockerfile**
-In diesem Dockerfile wird das neueste Ubuntu-Basisimage als Grundlage verwendet, anschließend werden der Apache-Webserver und das curl-Programm installiert, die Konfigurationsdatei des Apache-Servers aktualisiert, die index.html-Datei in das Verzeichnis /var/www/html kopiert und der Container auf Port 8081 freigegeben. Abschließend wird der Befehl zum Starten des Apache-Servers definiert.
 
 ### **apache.conf**
 Die apache.conf-Datei ist eine Konfigurationsdatei für den Apache-Webserver, die die grundlegenden Einstellungen für den Webserver definiert. Hier wird der Servername auf "localhost" und das Dokumentenverzeichnis auf "/var/www/html" gesetzt. Darüber hinaus werden die Berechtigungen für das Verzeichnis definiert, damit der Apache-Server auf die Dateien im Verzeichnis zugreifen und sie bereitstellen kann.
@@ -47,6 +46,24 @@ Dieser Dockerfile erstellt ein Docker-Image, das den Apache-Webserver mit aktivi
 
 ### **Verwendung**
 Das erstellte Docker-Image kann verwendet werden, um einen Apache-Webserver mit SSL-Unterstützung und Basis-Authentifizierung in einem Docker-Container bereitzustellen. Die Ports 80 und 443 müssen freigegeben werden, damit der Container von außen erreichbar ist.
+
+### **HTTP to HTTPS**
+```
+RUN echo '<VirtualHost *:80>' > /etc/apache2/sites-available/000-default.conf && \
+    echo '   ServerName localhost' >> /etc/apache2/sites-available/000-default.conf && \
+    echo '   Redirect permanent / https://localhost/' >> /etc/apache2/sites-available/000-default.conf && \
+    echo '</VirtualHost>' >> /etc/apache2/sites-available/000-default.conf
+```
+### **Authentifizierung**
+```
+RUN echo '<Directory /var/www/html>' >> /etc/apache2/sites-available/default-ssl.conf && \
+    echo '   AuthType Basic' >> /etc/apache2/sites-available/default-ssl.conf && \
+    echo '   AuthName "Restricted Content"' >> /etc/apache2/sites-available/default-ssl.conf && \
+    echo '   AuthUserFile /etc/apache2/.htpasswd' >> /etc/apache2/sites-available/default-ssl.conf && \
+    echo '   Require valid-user' >> /etc/apache2/sites-available/default-ssl.conf && \
+    echo '</Directory>' >> /etc/apache2/sites-available/default-ssl.conf
+```
+
 
 Dockerfile MySQL
 ===
