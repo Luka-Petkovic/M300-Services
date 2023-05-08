@@ -73,7 +73,7 @@ Dieser Dockerfile erstellt ein Image für einen MySQL-Server mit vordefinierten 
 ### **Details**
 Der Dockerfile basiert auf dem offiziellen MySQL-Image, das über Docker Hub bereitgestellt wird. Es wird eine Datenbank namens mydatabase erstellt und ein Benutzer mit den Zugangsdaten user:123456 angelegt. Der MySQL-Server wird auf Port 3306 freigegeben und automatisch gestartet, wenn der Docker-Container gestartet wird.
 
-Erstellung einer MySQL Datenbank und dessen User
+Erstellung einer MySQL Datenbank und dessen User:
 ```
 ENV MYSQL_DATABASE mydatabase
 
