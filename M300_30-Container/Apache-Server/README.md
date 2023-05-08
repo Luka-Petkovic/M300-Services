@@ -18,4 +18,5 @@ Nachdem ausführen des Befehls sollte das so aussehen:
 Die drei Dateien müssen sich im selben Verzeichnis befinden und der Benutzer muss im selben Verzeichnis sein, um die Befehle erfolgreich auszuführen.
 
 Schlussendlich sollte man unter http://localhost:8080 das hier sehen:
+
 ![Architecktur Docker](Screenshots/Endee.png)
