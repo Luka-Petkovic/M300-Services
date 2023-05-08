@@ -15,4 +15,4 @@ Nachdem ausführen des Befehls sollte das so aussehen:
 ![Architecktur Docker](Screenshots/Container.png)
 
 Schlussendlich sollte man unter http://localhost:8080 das hier sehen:
-![Architecktur Docker](Screenshots/Ende.png)
+![Architecktur Docker](Screenshots/Endee.png)
