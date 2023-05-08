@@ -17,6 +17,9 @@ kubectl port-forward service/master-service 8080:80
 kubectl port-forward service/worker-service 8081:80   
 ```
 
+Nachdem ausführen des Befehls sollte das so aussehen:
+![Architecktur Docker](Screenshots/Container.png)
+
 ### **Info**
 Nachdem erstellen des Clusters und dem Port-Forward können die Worker unter dem Link http://localhost:8081 abgerufen werden und der Master unter http://localhost:8080
 
