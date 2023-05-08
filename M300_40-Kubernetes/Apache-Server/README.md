@@ -14,5 +14,6 @@ Nachdem ausführen des Befehls "kubectl apply -f Apache.yaml" kann man automatis
 So sollte es aussehen nachdem ausführen von "kubectl apply -f Apache.yaml":
 ![Architecktur Docker](Screenshots/Image.png)
 
-Unter http://localhost:30080 findet man nun dies
+Unter http://localhost:30080 findet man nun dies:
+
 ![Architecktur Docker](Screenshots/Ende.png)
