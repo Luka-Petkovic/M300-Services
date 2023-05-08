@@ -25,6 +25,8 @@ Die apache.conf-Datei ist eine Konfigurationsdatei für den Apache-Webserver, di
 ### **index.html**
 Die index.html-Datei ist eine statische HTML-Seite, die im Apache-Webserver-Verzeichnis /var/www/html platziert wird. Sie enthält eine einfache HTML-Struktur mit einem Titel "M300-LB3" und einem Absatztext "Das ist ein Test". Wenn der Apache-Webserver gestartet ist, kann diese Seite im Webbrowser über die Adresse "localhost:8081" aufgerufen werden.
 
+[&uarr; nach oben](https://github.com/Luka-Petkovic/M300-Services/tree/main/M300_30-Container)
+
 Apache HTTP to HTTPS
 ===
 
@@ -47,14 +49,14 @@ Dieser Dockerfile erstellt ein Docker-Image, das den Apache-Webserver mit aktivi
 ### **Verwendung**
 Das erstellte Docker-Image kann verwendet werden, um einen Apache-Webserver mit SSL-Unterstützung und Basis-Authentifizierung in einem Docker-Container bereitzustellen. Die Ports 80 und 443 müssen freigegeben werden, damit der Container von außen erreichbar ist.
 
-### **HTTP to HTTPS**
+### **Code für HTTP to HTTPS**
 ```
 RUN echo '<VirtualHost *:80>' > /etc/apache2/sites-available/000-default.conf && \
     echo '   ServerName localhost' >> /etc/apache2/sites-available/000-default.conf && \
     echo '   Redirect permanent / https://localhost/' >> /etc/apache2/sites-available/000-default.conf && \
     echo '</VirtualHost>' >> /etc/apache2/sites-available/000-default.conf
 ```
-### **Authentifizierung**
+### **Code für Authentifizierung**
 ```
 RUN echo '<Directory /var/www/html>' >> /etc/apache2/sites-available/default-ssl.conf && \
     echo '   AuthType Basic' >> /etc/apache2/sites-available/default-ssl.conf && \
@@ -64,6 +66,7 @@ RUN echo '<Directory /var/www/html>' >> /etc/apache2/sites-available/default-ssl
     echo '</Directory>' >> /etc/apache2/sites-available/default-ssl.conf
 ```
 
+[&uarr; nach oben](https://github.com/Luka-Petkovic/M300-Services/tree/main/M300_30-Container)
 
 Dockerfile MySQL
 ===
@@ -73,6 +76,18 @@ Dieser Dockerfile erstellt ein Image für einen MySQL-Server mit vordefinierten 
 ### **Details**
 Der Dockerfile basiert auf dem offiziellen MySQL-Image, das über Docker Hub bereitgestellt wird. Es wird eine Datenbank namens mydatabase erstellt und ein Benutzer mit den Zugangsdaten user:123456 angelegt. Der MySQL-Server wird auf Port 3306 freigegeben und automatisch gestartet, wenn der Docker-Container gestartet wird.
 
+### **Code**
+```
+ENV MYSQL_DATABASE mydatabase
+
+ENV MYSQL_USER user
+ENV MYSQL_PASSWORD 123456
+
+EXPOSE 3306
+```
+
+[&uarr; nach oben](https://github.com/Luka-Petkovic/M300-Services/tree/main/M300_30-Container)
+
 Image Bereitstellung
 ===
 
@@ -81,13 +96,22 @@ Dieses Dockerfile erstellt ein Image für einen Apache Webserver auf Basis des o
 
 Das erstellte Image des Apache-Webservers kann sowohl in einem privaten Unternehmen als auch auf Docker-Hub hochgeladen werden, um es später auf anderen Systemen oder in der Cloud zu verwenden. Durch das Hochladen in ein privates Unternehmen können Sie das Image innerhalb Ihres Netzwerks oder auf Ihren eigenen Servern speichern und verteilen, während das Hochladen auf Docker-Hub das Image der breiten Öffentlichkeit zugänglich macht.
 
+[&uarr; nach oben](https://github.com/Luka-Petkovic/M300-Services/tree/main/M300_30-Container)
+
 Volumes
 ===
 
 Volumes in Docker ermöglichen es, Daten zwischen Containern auszutauschen und persistent zu speichern. Sie bieten Datenspeicherung, Persistenz und Flexibilität, um Daten in einem Container-Cluster zu teilen und zu skalieren.
 
+### **Code zum erstellen des Volumes**
+```
+VOLUME /var/lib/mysql
+```
+
 ### **MySQL**
 Dieses Dockerfile erstellt ein MySQL-Image mit spezifischen Konfigurationen. Es setzt Umgebungsvariablen, erstellt ein Volume für MySQL-Daten und öffnet den Port 3306. Mit einem Bestimmten Befehl kann man testen, ob das Volume auch richtig aufgesetzt ist (Siehe im "Volumes" Ordner).
+
+[&uarr; nach oben](https://github.com/Luka-Petkovic/M300-Services/tree/main/M300_30-Container)
 
 Testfälle
 ======
