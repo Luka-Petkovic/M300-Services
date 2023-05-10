@@ -1,26 +1,31 @@
 ### **Erstelle ein Image**
 ```
-docker build -t my-mysql-image .
+docker build -t my_mysql_image .
 ```
 
 Nachdem ausführen des Befehls sollte das so aussehen:
-![Architecktur Docker](Screenshots/Image.png)
+![Architecktur Docker](Screenshots/Image1.png)
 
 ### **Erstelle des MySQL Container**
 ```
-docker run --name my-mysql-container -p 3306:3306 -d my-mysql-image
+docker run --name my_mysql_container -v /pfad/zum/lokalen/verzeichnis:/var/lib/mysql -d my_mysql_image
 ```
 
 Nachdem ausführen des Befehls sollte das so aussehen:
-![Architecktur Docker](Screenshots/Container.png)
+![Architecktur Docker](Screenshots/Container1.png)
 
 ### **Testen ob man sich mit dem Volume verbinden kann**
+Um unser neu erstelltest Volume zu testen kann man ganz einfach eine Datei im Volume erstellen und diese dan mit dem "cat" Befehl hollen.
+
+Hier ist der Befehl um die Datei in der Volume zu ertsellen:
 ```
-docker exec -it my-mysql-container mysql -u myuser -pmypassword mydatabase
+docker exec my_mysql_container /bin/bash -c "echo 'test' > /var/lib/mysql/testfile"
 ```
 
-Nachdem ausführen des Befehls:
-![Architecktur Docker](Screenshots/Ende.png)
+Und mit diesem "cat" Befehl kannst du den Inhalt der Datei anschauen:
+```
+docker exec my_mysql_container cat /var/lib/mysql/testfile
+```
 
-### **Info**
-Wenn du erfolgreich mit der Datenbank verbunden bist, bedeutet das, dass das Volume korrekt erstellt wurde und funktioniert.
+Schlussendlich sollte das ganze etwa so aussehen:
+![Architecktur Docker](Screenshots/Ende1.png)
