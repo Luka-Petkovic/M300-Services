@@ -1,7 +1,7 @@
 Kubernetes auf Docker aktivieren
 ===
 
-Docker hat eine eingebaute Kubernetes Funktion di nur aktiviert werden muss.
+Docker hat eine eingebaute Kubernetes Funktion die nur aktiviert werden muss.
 
 Um es zu aktivieren muss man in Docker auf das Zahnraht gehen und unter "Kubernetes" den hacken bei "Enable Kubernetes" setzten:
 ![Architecktur Docker](Screenshots/Kubernetes.png)
