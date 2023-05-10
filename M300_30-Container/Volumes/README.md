@@ -15,7 +15,7 @@ Nachdem ausführen des Befehls sollte das so aussehen:
 ![Architecktur Docker](Screenshots/Container1.png)
 
 ### **Testen ob man sich mit dem Volume verbinden kann**
-Um unser neu erstelltest Volume zu testen kann man ganz einfach eine Datei im Volume erstellen und diese dan mit dem "cat" Befehl hollen.
+Um unser neu erstelltes Volume zu testen kann man ganz einfach eine Datei im Volume erstellen und diese dan mit dem "cat" Befehl hollen.
 
 Hier ist der Befehl um die Datei in der Volume zu ertsellen:
 ```
