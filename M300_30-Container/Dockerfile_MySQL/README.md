@@ -22,4 +22,5 @@ Man kann ebenfalls den unten erwähnten Befehl benutzten um sich auf dem Contain
 docker exec -it my-mysql-container mysql -u user -p
 ```
 Man wird um sein Passwort gefragt in meinem Dockerfile handelt sich um das Passwort "123456". Nachdem eingeben des Passworts sollte man das hier sehen:
+
 ![Architecktur Docker](Screenshots/Ende2.png)
