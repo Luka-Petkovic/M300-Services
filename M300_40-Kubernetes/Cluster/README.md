@@ -27,4 +27,4 @@ So sollte es aussehen wen man http://localhost:8080 aufruft:
 ![Architecktur Docker](Screenshots/Ende1.png)
 
 So sollte es aussehen wen man http://localhost:8081 aufruft:
-![Architecktur Docker](Screenshots/Ende1.png)
+![Architecktur Docker](Screenshots/Ende2.png)
